@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin-top: 30px;
+}
+
+.vue-option-container {
+  border-radius: 10px;
+  max-width: 400px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  margin: auto;
+}
+.vue-option-container .value-show-section {
+  position: absolute;
+  left: 13px;
+  top: 0px;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  opacity: .8;
+}
+.vue-option-container .vue-option-arrow {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease-in;
+}
+.vue-option-container .vue-option-arrow:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: flex;
+  justify-content: center;
+  right: 10px;
+  margin-top: -5px;
+  border-left: 2px solid #c7c9d3;
+  border-bottom: 2px solid #c7c9d3;
+  transform: rotate(-45deg);
+  transition: all .2s ease-in;
+}
+.vue-option-container input.vue-option-search-field {
+  width: 100%;
+  min-height: 30px;
+  border-radius: 4px;
+}
+.vue-option-container input.vue-option-search-field:focus ~ .vue-option-list-container {
+  opacity: 1;
+  max-height: 200px;
+  visibility: visible;
+  z-index: 100;
+}
+.vue-option-container input.vue-option-search-field:focus + .vue-option-arrow {
+  margin-top: 2px;
+  transform: rotate(180deg);
+}
+.vue-option-container .vue-option-list-container {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 100%;
+  max-height: 50px;
+  overflow-y: scroll;
+  box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all .2s ease-in;
+  border: 1px solid #c7c9d3;
+  border-top-width: 0px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 5px 0px;
+  background-color: white;
+}
+.vue-option-container .vue-option-list-container ul {
+  margin: 0px;
+  padding: 0px;
+}
+.vue-option-container .vue-option-list-container ul li {
+  padding: 5px;
+  padding-left: 10px;
+}
+.vue-option-container .vue-option-list-container ul li:hover {
+  background-color: #007ec6;
+  color: white;
+}

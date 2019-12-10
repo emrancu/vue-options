@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>vueOptions</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+          <vue-options 
+              v-model="name"
+              :options="options" 
+              option-text="name"                       
+              option-value="name"
+              :custom-text="customLabel"
+              input-class="form-control"
+              id="hello"
+              name="hello"
+              required
+              ></vue-options>
+    
+  <p>
+    <strong>Name:</strong> {{ name }}
+  </p>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+  <script  src="./script.js"></script>
+
+</body>
+</html>
